@@ -8,7 +8,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  * Example based on code delivered with ActiveMQ, located in folder:
  *  .../apache-activemq-5.14.0/examples/openwire/java/src/main/java/example
  */
-public class TopicDurableSubscriber {
+public class DurableSubscriber {
 
     public static void main(String[] args) throws JMSException {
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
