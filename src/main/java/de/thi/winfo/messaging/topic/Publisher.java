@@ -4,6 +4,11 @@ import jakarta.jms.*;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
+/*
+ * Example based on code delivered with ActiveMQ, located in folder:
+ *  .../apache-activemq-5.14.0/examples/openwire/java/src/main/java/example
+ */
+
 public class Publisher {
     public static void main(String[] args) throws JMSException {
 
@@ -19,6 +24,7 @@ public class Publisher {
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
         Topic topic = session.createTopic("ActiveMQTestTopic");
+
         MessageProducer publisher = session.createProducer(topic);
         publisher.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 
