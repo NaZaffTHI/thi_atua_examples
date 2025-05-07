@@ -51,5 +51,4 @@ public class Subscriber1 {
         }
         connection.close();
     }
-
 }

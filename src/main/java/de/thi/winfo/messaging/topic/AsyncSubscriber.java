@@ -8,8 +8,8 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  * Example based on code delivered with ActiveMQ, located in folder:
  *  .../apache-activemq-5.14.0/examples/openwire/java/src/main/java/example
  */
-public class AsyncSubscriber {
 
+public class AsyncSubscriber {
     public static void main(String[] args) throws JMSException, InterruptedException {
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
                 ActiveMQConnection.DEFAULT_USER,
@@ -26,7 +26,6 @@ public class AsyncSubscriber {
         MessageConsumer subscriber = session.createConsumer(topic);
 
         // Setting MessageListener instead of receive-method!!!
-        boolean[] finishReceiving = {false};
         MessageListener messageListener = new MessageListener();
         subscriber.setMessageListener(messageListener);
 

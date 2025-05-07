@@ -4,6 +4,11 @@ import jakarta.jms.*;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
+/*
+ * Example based on code delivered with ActiveMQ, located in folder:
+ *  .../apache-activemq-5.14.0/examples/openwire/java/src/main/java/example
+ */
+
 public class Consumer1 {
     public static void main(String[] args) throws JMSException {
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
@@ -16,8 +21,8 @@ public class Consumer1 {
         connection.start();
 
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
         Destination destination = session.createQueue("ActiveMQTestQueue");
+
         MessageConsumer consumer = session.createConsumer(destination);
 
         long start = System.currentTimeMillis();
