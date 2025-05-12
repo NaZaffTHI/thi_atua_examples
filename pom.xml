@@ -20,5 +20,10 @@
             <artifactId>activemq-broker</artifactId>
             <version>6.1.5</version>
         </dependency>
+        <dependency>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
     </dependencies>
 </project>
